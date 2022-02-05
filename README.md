@@ -15,7 +15,7 @@
 > <br>
 > The APP is created with the latest industry standards using React.js NextJs and Recoil
 > <br>
-> Firebase is used for the backend <br> > <br>
+> Firebase is used for the backend
 
 ### Built With
 
