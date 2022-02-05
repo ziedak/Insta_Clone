@@ -1,27 +1,64 @@
-# Next.js + Tailwind CSS Example
+# Instagram Next.js + Tailwind CSS + Firebase Example
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<!-- TABLE OF CONTENTS -->
 
-## Preview
+## Table of Contents
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [License](#license)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### About the Project
 
-## Deploy your own
+> The <b>Instagram-clone</b> web application presents a custom Instagram-clone.
+> <br>
+> The APP is created with the latest industry standards using React.js NextJs and Recoil
+> <br>
+> Firebase is used for the backend <br> > <br>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Built With
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+This project was built using these technologies.
 
-## How to use
+- React.js
+- Next Js
+- Recoil
+- Firebase
+- GitHub
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Getting Started
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+**To get this project set up on your local machine, follow these simple steps:**
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+**Step 1**<br>
+Navigate through the local folder where you want to clone the repository and run<br>
+`https://github.com/ziedak/Insta_Clone.git insta_clone`. It will clone the repo to your local folder.<br>
+**Step 2**<br>
+Run `cd insta_clone`<br>
+**Step 3**<br>
+Run `yarn install` to install the yarn packages from the `package.json` file.<br>
+**Step 4**<br>
+Run `yarn start` to start the webpack server, you can now navigate to `http://localhost:3000` to view the app. The server refreshes the app every time you make a change to a file used by it.<br>
+**Step 5**<br>
+Most important, enjoy the app!<br>
+
+## Tests
+
+1. Open Terminal
+
+2. Install dependencies (only if you did not install them previously):
+
+   `yarn install`
+
+3. Run the tests with the command:
+
+   `yarn test`
+
+## License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+## Show your support
+
+If you've read this far....give me a ⭐️!
