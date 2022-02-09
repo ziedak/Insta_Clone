@@ -11,9 +11,9 @@ import { HeartIcon as HeartIconFilled } from '@heroicons/react/solid'
 const Post = ({ post }) => {
   const { id, username, avatar, postImg, caption } = post
   return (
-    <div>
+    <div className="border-gray-200 border mt-5 bg-white">
       {/* Header */}
-      <div className="flex items-center p-5">
+      <div className="flex items-center p-3">
         <img
           src={avatar}
           alt=""
@@ -40,7 +40,7 @@ const Post = ({ post }) => {
       </p>
       {/* comments */}
       {/* input Box */}
-      <form className="flex items-center p-4">
+      <form className="flex items-center p-4 border-t">
         <EmojiHappyIcon className="h-7" />
         <input
           type="text"
