@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Story = ({ img, username }) => {
-  console.log(username)
   return (
     <div>
       <img

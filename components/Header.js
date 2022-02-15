@@ -1,25 +1,31 @@
-import Image from 'next/image'
-
 import {
-  SearchIcon,
-  PlusCircleIcon,
-  UserGroupIcon,
   HeartIcon,
-  PaperAirplaneIcon,
   MenuIcon,
+  PaperAirplaneIcon,
+  PlusCircleIcon,
+  SearchIcon,
+  UserGroupIcon,
 } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
 import { signIn, signOut, useSession } from 'next-auth/react'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useRecoilState } from 'recoil'
+import { modalState } from '../atoms/modalAtom'
 
 const Header = () => {
   const { data: session } = useSession()
-  console.log('session', session)
+  const [open, setOpen] = useRecoilState(modalState)
+  const router = useRouter()
 
   return (
-    <div className="sticky top-0 shadow-sm border-b bg-white z-50">
-      <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
+    <div className="sticky top-0 z-50 border-b bg-white shadow-sm">
+      <div className="mx-5 flex max-w-6xl justify-between xl:mx-auto">
         {/* Left */}
-        <div className="relative hidden lg:inline-grid  w-24">
+        <div
+          onClick={() => router.push('/')}
+          className="relative hidden w-24  cursor-pointer lg:inline-grid"
+        >
           <Image
             src="https://links.papareact.com/ocw"
             layout="fill"
@@ -27,7 +33,10 @@ const Header = () => {
           />
         </div>
 
-        <div className="relative   w-10 lg:hidden flex-shrink-0">
+        <div
+          onClick={() => router.push('/')}
+          className="relative w-10 flex-shrink-0 lg:hidden"
+        >
           <Image
             src="https://links.papareact.com/jjm"
             layout="fill"
@@ -36,37 +45,42 @@ const Header = () => {
         </div>
 
         {/* Center */}
-        <div className="relative mt-1 p-3  rounded-md max-w-xs">
-          <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
+        <div className="relative mt-1 max-w-xs  rounded-md p-3">
+          <div className="pointer-events-none absolute inset-y-0 flex items-center pl-3">
             <SearchIcon className="h-5 w-5 text-gray-500" />
           </div>
           <input
-            className="bg-gray-50 block w-full pl-10 sm:text-sm border-gray-300 rounded-md focus:ring-black focus:border-black "
+            className="block w-full rounded-md border-gray-300 bg-gray-50 pl-10 focus:border-black focus:ring-black sm:text-sm "
             type="text"
             placeholder="Search"
           />
         </div>
+
         {/* Right */}
-        <div className="flex items-center justify-end space-x-4 mt-1">
-          <MenuIcon className="h-6 md:hidden cursor-pointer" />
-          <HomeIcon className="navBtn" />
+        <div className="mt-1 flex items-center justify-end space-x-4">
+          <MenuIcon className="h-6 cursor-pointer md:hidden" />
+          <HomeIcon onClick={() => router.push('/')} className="navBtn" />
+          <PlusCircleIcon onClick={() => setOpen(true)} className="navBtn" />
           {session ? (
             <>
-              <div className="relative navBtn">
+              <div className="navBtn relative">
                 <PaperAirplaneIcon className="navBtn rotate-45" />
 
-                <div className="absolute -top-2 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white animate-pulse">
+                <div className="absolute -top-2 -right-2 flex h-5 w-5 animate-pulse items-center justify-center rounded-full bg-red-500 text-xs text-white">
                   30
                 </div>
               </div>
-              <PlusCircleIcon className="navBtn" />
+              <PlusCircleIcon
+                onClick={() => setOpen(true)}
+                className="navBtn"
+              />
               <UserGroupIcon className="navBtn" />
               <HeartIcon className="navBtn" />
               <img
                 onClick={signOut}
                 src={session?.user?.image}
                 alt="profil pic"
-                className="h-10 w-10 rounded-full cursor-pointer"
+                className="h-10 w-10 cursor-pointer rounded-full"
               />
             </>
           ) : (
