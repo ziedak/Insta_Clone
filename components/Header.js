@@ -60,7 +60,7 @@ const Header = () => {
         <div className="mt-1 flex items-center justify-end space-x-4">
           <MenuIcon className="h-6 cursor-pointer md:hidden" />
           <HomeIcon onClick={() => router.push('/')} className="navBtn" />
-          <PlusCircleIcon onClick={() => setOpen(true)} className="navBtn" />
+
           {session ? (
             <>
               <div className="navBtn relative">

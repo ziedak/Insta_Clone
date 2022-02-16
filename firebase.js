@@ -7,24 +7,14 @@ import { getStorage } from 'firebase/storage'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: process.env.FIREBASE_API_KEY,
-//   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-//   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-//   appId: process.env.FIREBASE_APP_ID,
-//   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-// }
-
 const firebaseConfig = {
-  apiKey: 'AIzaSyAC1z0g_1adY2AIG6ueDVSFqlsmQziWnkk',
-  authDomain: 'insta-6edb3.firebaseapp.com',
-  projectId: 'insta-6edb3',
-  storageBucket: 'insta-6edb3.appspot.com',
-  messagingSenderId: '183601028263',
-  appId: '1:183601028263:web:8139bcbcd58fb993e50f82',
-  measurementId: 'G-838JGTYEDH',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
 
 console.log(firebaseConfig)

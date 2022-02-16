@@ -47,17 +47,17 @@ const Modal = () => {
     const docRef = await addDoc(collection(db, 'posts'), {
       username: session?.user?.username,
       caption: captionRef.current.value,
-      profilImage: session.user.image,
+      avatar: session.user.image,
       timestamp: serverTimestamp(),
     }).then(async (dc) => {
       if (selectedFile) {
         //upload imageToPost
-        const uploadtask = ref(storage, `posts/image/${dc.id}`)
-        await uploagitdString(uploadtask, selectedFile, 'data_url').then(
+        const uploadtask = ref(storage, `posts/${dc.id}/image`)
+        await uploadString(uploadtask, selectedFile, 'data_url').then(
           async () => {
             //on upload complete
 
-            const storageRef = ref(storage, `posts/image/${dc.id}`)
+            const storageRef = ref(storage, `posts/${dc.id}/image`)
 
             await getDownloadURL(storageRef).then(async (url) => {
               console.log('url', url)
