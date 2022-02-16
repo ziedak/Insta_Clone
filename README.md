@@ -17,6 +17,10 @@
 > <br>
 > Firebase is used for the backend
 
+### Screenshot
+<br/><img src="./screenshot.png" width="600"/><br/>
+
+
 ### Built With
 
 This project was built using these technologies.
