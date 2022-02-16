@@ -18,7 +18,6 @@
 > Firebase is used for the backend
 
 ### Screenshot
-<br/><img src="./screenshot.png" width="600"/><br/>
 ![Screenshot](screenshot.png)
 
 ### Built With
